@@ -87,7 +87,7 @@ google.maps.event.addDomListener(window, 'load', init);
 			position: new google.maps.LatLng(lat, longitude),
 			map: map,
 			title: title,
-			desc: description,
+			desc: title,
 			tel: telephone,
 			email: email,
 			web: web
@@ -97,7 +97,7 @@ link = "http://" + web;
 } else {
 link = web;
 }
-            bindInfoWindow(marker, map, locations[i][0], address, po, mobile, telephone, email, web, link);
+            bindInfoWindow(marker, map, title, address, po, mobile, telephone, email, web, link);
             
      
  function bindInfoWindow(marker, map, title, address, po, mobile, telephone, email, web, link) {

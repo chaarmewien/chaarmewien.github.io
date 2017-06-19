@@ -97,8 +97,7 @@ google.maps.event.addDomListener(window, 'load', init);
 		else {
 			link = web;
 		}
-		bindInfoWindow(marker, map, title, address, po, mobile, telephone, email, web, link);
-		infoWindowVisible(true);
+		bindInfoWindow(marker, map, title, address, po, mobile, telephone, email, web, link);		
             
      
  function bindInfoWindow(marker, map, title, address, po, mobile, telephone, email, web, link) {
@@ -124,6 +123,7 @@ google.maps.event.addDomListener(window, 'load', init);
                    infoWindowVisible(true);
                }
         });
+		infoWindowVisible(true);
         google.maps.event.addListener(iw, 'closeclick', function () {
             infoWindowVisible(false);
         });

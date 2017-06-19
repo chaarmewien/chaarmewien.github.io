@@ -83,7 +83,6 @@ google.maps.event.addDomListener(window, 'load', init);
 		var longitude = 16.34305
         
 		marker = new google.maps.Marker({
-			icon: markericon,
 			position: new google.maps.LatLng(lat, longitude),
 			map: map,
 			title: title,

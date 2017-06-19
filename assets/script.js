@@ -127,6 +127,9 @@ google.maps.event.addDomListener(window, 'load', init);
         google.maps.event.addListener(iw, 'closeclick', function () {
             infoWindowVisible(false);
         });
-		infoWindowVisible(true);
+		var html= "<div padding:5px;width:160px;'><h4>"+title+"</h4><p>"+address+"<p><p>"+po+"<p><p>"+mobile+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><p><p><a href='"+link+"'' >"+web+"<a><p></div>";
+		   iw = new google.maps.InfoWindow({content:html});
+		   iw.open(map,marker);
+		   infoWindowVisible(true);
  }
 }

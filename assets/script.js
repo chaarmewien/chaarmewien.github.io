@@ -73,7 +73,7 @@ google.maps.event.addDomListener(window, 'load', init);
         var mapElement = document.getElementById('map');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-['Chaarme', 'Wien', '121 1212 2121', 'chaarme.wien@gmail.com', 'chaarme.at', 48.2031102, 16.34305]
+['Chaarme e.U.', 'Schottenfeldgasse 61/1', '1070 Wien', '+43 (0) 660 50 60 626', '+43 (0) 1 923 78 65', 'chaarme.wien@gmail.com', 48.2031102, 16.34305]
         ];
         for (i = 0; i < locations.length; i++) {
             if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}

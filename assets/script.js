@@ -91,12 +91,14 @@ google.maps.event.addDomListener(window, 'load', init);
 			email: email,
 			web: web
             });
-if (web.substring(0, 7) != "http://") {
-link = "http://" + web;
-} else {
-link = web;
-}
-            bindInfoWindow(marker, map, title, address, po, mobile, telephone, email, web, link);
+		if (web.substring(0, 7) != "http://") {
+			link = "http://" + web;
+			} 
+		else {
+			link = web;
+		}
+		bindInfoWindow(marker, map, title, address, po, mobile, telephone, email, web, link);
+		infoWindowVisible(true);
             
      
  function bindInfoWindow(marker, map, title, address, po, mobile, telephone, email, web, link) {

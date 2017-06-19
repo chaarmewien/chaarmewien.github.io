@@ -73,20 +73,24 @@ google.maps.event.addDomListener(window, 'load', init);
         var mapElement = document.getElementById('map');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-['Chaarme e.U.', 'Schottenfeldgasse 61/1', '1070 Wien', '+43 (0) 660 50 60 626', '+43 (0) 1 923 78 65', 'chaarme.wien@gmail.com', 48.2031102, 16.34305]
+['Chaarme e.U.', 'Schottenfeldgasse 61/1', '1070 Wien', '+43 (0) 660 50 60 626', '+43 (0) 1 923 78 65', 'www.chaarme.at', 'chaarme.wien@gmail.com', 48.2031102, 16.34305]
         ];
         for (i = 0; i < locations.length; i++) {
-            if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
-            if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
-            if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
-           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
-           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+            if (locations[i][1] =='undefined'){ address ='';} else { address = locations[i][1];}
+			if (locations[i][2] =='undefined'){ po ='';} else { po = locations[i][2];}
+            if (locations[i][3] =='undefined'){ mobile ='';} else { mobile = locations[i][3];}
+			if (locations[i][4] =='undefined'){ telephone ='';} else { telephone = locations[i][4];}            
+           if (locations[i][5] =='undefined'){ web ='';} else { web = locations[i][5];}
+		   if (locations[i][6] =='undefined'){ email ='';} else { email = locations[i][6];}
+           if (locations[i][9] =='undefined'){ markericon ='';} else { markericon = locations[i][9];}
             marker = new google.maps.Marker({
                 icon: markericon,
-                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                position: new google.maps.LatLng(locations[i][7], locations[i][8]),
                 map: map,
                 title: locations[i][0],
-                desc: description,
+                address: address,
+				po:po,
+				mobile:mobile,
                 tel: telephone,
                 email: email,
                 web: web
@@ -96,12 +100,12 @@ link = "http://" + web;
 } else {
 link = web;
 }
-            bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
+            bindInfoWindow(marker, map, locations[i][0], address, po, mobile, telephone, email, web, link);
             
      }
- function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
+ function bindInfoWindow(marker, map, title, address, po, mobile, telephone, email, web, link) {
       var infoWindowVisible = (function () {
-              var currentlyVisible = false;
+              var currentlyVisible = true;
               return function (visible) {
                   if (visible !== undefined) {
                       currentlyVisible = visible;
@@ -114,9 +118,9 @@ link = web;
            google.maps.event.addListener(marker, 'click', function() {
                if (infoWindowVisible()) {
                    iw.close();
-                   infoWindowVisible(false);
+                   infoWindowVisible(true);
                } else {
-                   var html= "<div padding:5px;width:160px;'><h4>"+title+"</h4><p>"+desc+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><p><p><a href='"+link+"'' >"+web+"<a><p></div>";
+                   var html= "<div padding:5px;width:160px;'><h4>"+title+"</h4><p>"+address+"<p><p>"+po+"<p><p>"+mobile+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><p><p><a href='"+link+"'' >"+web+"<a><p></div>";
                    iw = new google.maps.InfoWindow({content:html});
                    iw.open(map,marker);
                    infoWindowVisible(true);

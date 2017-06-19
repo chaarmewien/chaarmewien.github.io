@@ -123,9 +123,10 @@ google.maps.event.addDomListener(window, 'load', init);
                    infoWindowVisible(true);
                }
         });
-		infoWindowVisible(true);
+		
         google.maps.event.addListener(iw, 'closeclick', function () {
             infoWindowVisible(false);
         });
+		infoWindowVisible(true);
  }
 }

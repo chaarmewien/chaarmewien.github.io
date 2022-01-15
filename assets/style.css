@@ -1,4 +1,4 @@
-body {	color:#333;	font:300 15px/15px Roboto,Arial,Helvetica;background:url(../images/bg.jpg) right no-repeat fixed #fff; -webkit-font-smoothing:antialiased;}
+body {	color:#333;	font:300 15px/15px Josefin Sans,Arial,Helvetica;background:url(../images/bg.jpg) right no-repeat fixed #fff; -webkit-font-smoothing:antialiased;}
 
 a{color:#00a9c6; text-decoration:none;}
 a:hover{color:#666;}
@@ -11,10 +11,13 @@ transition: all 0.3s ease-in-out;
 outline: none !important;
 }
 
+@font-face { font-family: Josefin Sans; src: url('fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf'); } 
+@font-face { font-family: Lobster; src: url('fonts/Lobster/Lobster-Regular.ttf'); } 
+
 h1,h2,h3,h4{margin: 0;line-height: 1em;}
 h2{font:300 2.5em Josefin Sans,Arial,Helvetica;margin-bottom: 1.5em;}
-h3{font:300 2em Roboto,Arial,Helvetica;margin:2em 0 1em 0;}
-h4{font:300 1.5em Roboto,Arial,Helvetica;margin-bottom: 1em;}
+h3{font:300 2em Josefin Sans,Arial,Helvetica;margin:2em 0 1em 0;}
+h4{font:300 1.5em Josefin Sans,Arial,Helvetica;margin-bottom: 1em;}
 h4 i{margin-right: 0.5em;}
 
 p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
@@ -106,11 +109,11 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 
 
 @media (max-width: 1200px) {
-	body{font:300 13px/13px Roboto,Arial,Helvetica;}
+	body{font:300 13px/13px Josefin Sans,Arial,Helvetica;}
 	.navbar-brand{padding-top: 11px;}
 	.services ul li{margin:0 0.5em; }
 	
-	.grid figure h2{font: 700 1.5em Roboto,Arial,Helvetica;}
+	.grid figure h2{font: 700 1.5em Josefin Sans,Arial,Helvetica;}
 	figure.effect-oscar figcaption{padding: 12%;}
 	figure.effect-oscar figcaption::before,figure.effect-chico figcaption::before{top: 20px;right: 20px;bottom: 20px;left: 20px;}
 
@@ -118,8 +121,8 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 }
 
 @media (max-width: 900px) {
-	h1{font: 700 3.5em Roboto,Arial,Helvetica;}
-	h4 {font: 300 1.3em Roboto,Arial,Helvetica;}
+	h1{font: 700 3.5em Josefin Sans,Arial,Helvetica;}
+	h4 {font: 300 1.3em Josefin Sans,Arial,Helvetica;}
 	.btn{padding: 1em 2em;}
 	.partners img{margin: 0 15px 25px 0;width: 157px;}
 	.services ul li{width: 9em;height: 9em;}
@@ -131,7 +134,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 
 
 @media (max-width: 767px) {
-	body{font:300 12px/12px Roboto,Arial,Helvetica;}
+	body{font:300 12px/12px Josefin Sans,Arial,Helvetica;}
 	.navbar-nav > li > a {line-height: 1em;}	
 	.navbar-brand{padding: 7px;}
 	.navbar-brand img{height: 37px;}
@@ -140,7 +143,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 	.banner .caption,.carousel-caption,.carousel-control,.carousel-indicators{display: none;}
 
 	h2.text-center{text-align: left;font-size: 1.7em;}
-	h4 {font: 300 1.2em Roboto,Arial,Helvetica;}
+	h4 {font: 300 1.2em Josefin Sans,Arial,Helvetica;}
 	#partners h2{padding: 0 1em;} 
 	#home {padding-top: 5em;}
 
